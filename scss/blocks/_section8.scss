@@ -1,0 +1,65 @@
+.feedback {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.85) 100%
+    ),
+    url(/img/section9_backgraund.png) no-repeat center/cover;
+  opacity: 0.9;
+  padding: 100px 0;
+  .feedback__title {
+    @include title;
+    margin-bottom: 50px;
+  }
+  .feedback__content {
+    .feedback__items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .feedback__item {
+        display: flex;
+        align-items: center;
+        .feedback__logo {
+          margin-right: 25px;
+        }
+        .feedback__text {
+          max-width: 380px;
+          width: 100%;
+          h6 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #333333;
+            font-weight: 700;
+          }
+          .feedback__position {
+            color: #777777;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            font-style: italic;
+          }
+          span {
+            @include span;
+            margin: 23px 0;
+          }
+          .feedback__about {
+            color: #999999;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .feedback {
+    .feedback__content {
+      .feedback__items {
+        .feedback__item {
+          &:nth-child(3) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}

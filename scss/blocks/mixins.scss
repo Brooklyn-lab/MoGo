@@ -1,0 +1,209 @@
+@mixin title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  h6 {
+    color: #333333;
+    font-size: 24px;
+    padding-bottom: 27px;
+    font-family: "Kaushan Script", cursive;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 80px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    color: #333333;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 1px solid #f38181;
+      top: 70px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 60px;
+      height: 3px;
+      background: #f38181;
+    }
+  }
+  p {
+    max-width: 950px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: #999999;
+  }
+}
+@mixin h6 {
+  color: #333333;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@mixin p {
+  color: #999999;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+@mixin slaid {
+  max-width: 929px;
+  width: 100%;
+  height: auto;
+  p {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #999;
+    font-style: italic;
+    font-weight: bold;
+  }
+  h6 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #333333;
+    font-size: 24px;
+    font-family: "Kaushan Script", cursive;
+    margin-bottom: 0;
+    span {
+      @include span;
+    }
+  }
+}
+@mixin span {
+  max-width: 60px;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background: #f38181;
+}
+@mixin footer-subtitle {
+  font-size: 14px;
+  color: #7c7c7c;
+  text-decoration: none;
+  line-height: 2;
+}
+@mixin footer-title {
+  color: #494949;
+  font-size: 20px;
+  font-weight: 700;
+}
+@mixin icon {
+  color: #fff;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+@mixin btn {
+  max-width: 154px;
+  width: 100%;
+  border-radius: 20px;
+  height: 34px;
+  border: 3px solid #fff;
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  user-select: none;
+  transition: 0.5s;
+  &:hover {
+    color: #e88283;
+    background: #fff;
+  }
+}
+
+@mixin btn {
+  max-width: 154px;
+  width: 100%;
+  border-radius: 20px;
+  height: 34px;
+  border: 3px solid #fff;
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  user-select: none;
+  transition: 0.5s;
+  &:hover {
+    color: #e88283;
+    background: #fff;
+  }
+}
+
+@mixin btns {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  margin: 0 auto;
+  max-width: 370px;
+  width: 100%;
+  height: 70px;
+  border: 2px solid #e88283;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 129, 130, 0.9) 0%,
+    rgba(239, 217, 137, 0.9) 100%
+  );
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 30px;
+  transition: 0.5s;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: #e88283;
+    transition: 0.5s;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin back {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from rgba(232, 129, 130, 0.9),
+    color-stop(45%, rgba(239, 217, 137, 0.9))
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(232, 129, 130, 0.9) 0%,
+    rgba(239, 217, 137, 0.9) 56%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

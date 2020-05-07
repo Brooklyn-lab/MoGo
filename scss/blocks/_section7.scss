@@ -1,0 +1,105 @@
+.work {
+  padding: 100px 15px;
+  .container {
+    padding: 0;
+    max-width: 1140px;
+    .work__title {
+      @include title;
+    }
+    .work__content {
+      padding: 0;
+      margin: 0 0 100px 0;
+      .work__items {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        .work__duble {
+          padding: 0;
+        }
+        .work__item {
+          padding: 0;
+          max-width: 100%;
+          height: auto;
+          position: relative;
+          transition: 0.5s;
+          cursor: pointer;
+          .work__pick {
+            img {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+          }
+          .work__overlay {
+            position: absolute;
+            top: 0;
+            height: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              180deg,
+              rgba(232, 129, 130, 0.9) 0%,
+              rgba(239, 217, 137, 0.9) 100%
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: 0.5s;
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+            }
+            h6 {
+              color: rgb(255, 255, 255);
+              margin: 18px 0 15px;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+            p {
+              @include p;
+              color: rgb(255, 255, 255);
+              font-style: italic;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+    .work__slider {
+      .work__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        @media screen and (max-width: 992px) {
+          flex-wrap: wrap;
+          padding: 0 15px;
+          text-align: center;
+          h6 {
+            justify-content: center;
+          }
+        }
+        .work__slide_items {
+          @include slaid;
+        }
+        .work__slide_logo {
+          margin-right: 60px;
+          @media screen and (max-width: 992px) {
+            margin-right: 15px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work__item {
+    img {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+}
