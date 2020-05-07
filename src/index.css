@@ -803,6 +803,12 @@ footer {
   padding: 100px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .whatWeDo {
+    padding: 100px 0 50px;
+  }
+}
+
 .whatWeDo .whatWeDo__title {
   text-align: center;
   margin: 0 auto;
@@ -853,7 +859,7 @@ footer {
 }
 
 .whatWeDo .whatWeDo__content {
-  margin: 0 15px 100px;
+  margin: 0 15px 50px;
 }
 
 .whatWeDo .whatWeDo__content .whatWeDo__logo {
@@ -983,6 +989,7 @@ footer {
 .whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .content {
   border-left: 1px solid #d0d0d0;
   border-right: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
   position: relative;
   max-height: 1px;
   padding: 0;
@@ -999,6 +1006,17 @@ footer {
   color: #999999;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
+}
+
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion ::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background: transparent;
+}
+
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion ::-webkit-scrollbar-thumb {
+  background: #777777;
+  border-radius: 15px;
 }
 
 .whatWeDo .whatWeDo__content .whatWeDo__slaids #checkbox-1:checked ~ .content,
@@ -1123,6 +1141,12 @@ footer {
 .team {
   padding: 100px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .team {
+    padding: 50px 0;
+  }
 }
 
 .team .team__title {
@@ -1349,6 +1373,12 @@ footer {
   padding: 100px 15px;
 }
 
+@media screen and (max-width: 992px) {
+  .work {
+    padding: 50px 15px;
+  }
+}
+
 .work .container {
   padding: 0;
   max-width: 1140px;
@@ -1572,6 +1602,12 @@ footer {
   padding: 100px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .feedback {
+    padding: 50px 0;
+  }
+}
+
 .feedback .feedback__title {
   text-align: center;
   margin: 0 auto;
@@ -1686,7 +1722,7 @@ footer {
 }
 
 .plan {
-  background: url("/img/background-section6.png") no-repeat bottom/cover #f4fbfc;
+  background: url("./img/background-section6.png") no-repeat bottom/cover #f4fbfc;
   padding: 100px 0;
 }
 
@@ -1694,6 +1730,7 @@ footer {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 130px;
+  margin-bottom: 80px;
 }
 
 .plan .plan__title h6 {
@@ -1738,6 +1775,12 @@ footer {
   color: #999999;
 }
 
+@media screen and (max-width: 992px) {
+  .plan .plan__title {
+    margin-bottom: 50px;
+  }
+}
+
 .plan .plan__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1759,12 +1802,12 @@ footer {
 }
 
 .plan .plan__items .plan__item {
-  background: url(/img/section11-logo1.png) no-repeat top #fff;
+  background: url(./img/section11-logo1.png) no-repeat top #fff;
   background-size: contain;
   max-width: 320px;
   width: 100%;
   height: 580px;
-  border: 1px solid #fff;
+  border: 1px solid #7c7c7c50;
   border-radius: 30px;
   text-align: center;
   -webkit-box-align: center;
@@ -1786,6 +1829,12 @@ footer {
 .plan .plan__items .plan__item:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 992px) {
+  .plan .plan__items .plan__item:not(last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .plan .plan__items .plan__item .plan__content {
@@ -1922,11 +1971,17 @@ footer {
   padding: 100px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .subskribe {
+    padding: 50px;
+  }
+}
+
 .subskribe .subskribe__title {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 130px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .subskribe .subskribe__title h6 {
@@ -1971,6 +2026,12 @@ footer {
   color: #999999;
 }
 
+@media screen and (max-width: 992px) {
+  .subskribe .subskribe__title {
+    margin-bottom: 30px;
+  }
+}
+
 .subskribe .subskribe__content .subskribe__form input {
   max-width: 370px;
   width: 100%;
@@ -1978,7 +2039,10 @@ footer {
   border: 1px solid #f5fafa;
   border-radius: 30px;
   background: #f5fafa;
-  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 30px;
   text-align: center;
   color: #d0d4d4;
   outline: none;
@@ -2041,6 +2105,12 @@ footer {
 
 .footer {
   padding: 100px 0 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    padding: 50px 0 30px;
+  }
 }
 
 .footer .footer__items {
@@ -2188,6 +2258,61 @@ footer {
   padding: 50px 0;
 }
 
+.filter .filter__title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  margin-bottom: 40px;
+}
+
+.filter .filter__title h6 {
+  color: #333333;
+  font-size: 24px;
+  padding-bottom: 27px;
+  font-family: "Kaushan Script", cursive;
+}
+
+.filter .filter__title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 80px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  color: #333333;
+  position: relative;
+}
+
+.filter .filter__title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid #f38181;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  background: #f38181;
+}
+
+.filter .filter__title p {
+  max-width: 950px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+}
+
+@media screen and (max-width: 992px) {
+  .filter .filter__title {
+    margin-bottom: 20px;
+  }
+}
+
 .filter .filter__wrapper {
   margin: 0;
 }
@@ -2292,7 +2417,18 @@ footer {
   width: 100%;
 }
 
-.filter .filter__wrapper .filter__more {
+.filter .filter__wrapper .filter__more_files {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.filter .filter__wrapper .filter__more_files input[type="file"] {
+  display: none;
+}
+
+.filter .filter__wrapper .filter__more_files .filter__more {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2323,18 +2459,19 @@ footer {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  cursor: pointer;
   width: 125px;
   height: auto;
   padding: 10px 30px;
 }
 
-.filter .filter__wrapper .filter__more:hover {
+.filter .filter__wrapper .filter__more_files .filter__more:hover {
   background: #fff;
   color: #e88283;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.filter .filter__wrapper .filter__more:focus {
+.filter .filter__wrapper .filter__more_files .filter__more:focus {
   outline: none;
 }

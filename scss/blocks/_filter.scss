@@ -1,5 +1,12 @@
 .filter {
   padding: 50px 0;
+  .filter__title {
+    @include title;
+    margin-bottom: 40px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+  }
   .filter__wrapper {
     margin: 0;
     .tabs__btns {
@@ -64,11 +71,19 @@
         }
       }
     }
-    .filter__more {
-      @include btns;
-      width: 125px;
-      height: auto;
-      padding: 10px 30px;
+    .filter__more_files {
+      display: flex;
+      margin: 0 auto;
+      input[type="file"] {
+        display: none;
+      }
+      .filter__more {
+        @include btns;
+        cursor: pointer;
+        width: 125px;
+        height: auto;
+        padding: 10px 30px;
+      }
     }
   }
 }

@@ -1,5 +1,8 @@
 .whatWeDo {
   padding: 100px 0;
+  @media screen and (max-width: 992px) {
+    padding: 100px 0 50px;
+  }
   .whatWeDo__title {
     @include title;
     margin-bottom: 100px;
@@ -7,7 +10,7 @@
     }
   }
   .whatWeDo__content {
-    margin: 0 15px 100px;
+    margin: 0 15px 50px;
     .whatWeDo__logo {
       padding-left: 0;
       padding-right: 30px;
@@ -90,6 +93,7 @@
           .content {
             border-left: 1px solid #d0d0d0;
             border-right: 1px solid #d0d0d0;
+            border-bottom: 1px solid #d0d0d0;
             position: relative;
             max-height: 1px;
             padding: 0;
@@ -103,6 +107,15 @@
               @include p;
             }
           }
+        }
+        ::-webkit-scrollbar {
+          width: 5px;
+          height: 8px;
+          background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #777777;
+          border-radius: 15px;
         }
       }
       #checkbox-1:checked ~ .content,

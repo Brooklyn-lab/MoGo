@@ -6,6 +6,9 @@
     url(/img/section9_backgraund.png) no-repeat center/cover;
   opacity: 0.9;
   padding: 100px 0;
+  @media screen and (max-width: 992px) {
+    padding: 50px 0;
+  }
   .feedback__title {
     @include title;
     margin-bottom: 50px;
