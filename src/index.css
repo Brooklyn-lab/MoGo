@@ -896,45 +896,22 @@ footer {
   }
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion {
   position: relative;
   width: 100%;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items {
   margin-bottom: 15px;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-1,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-2,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-3 {
-  display: none;
-}
-
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-1:checked + label,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-2:checked + label,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-3:checked + label {
-  background-color: #fff;
-}
-
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-1:checked + label i:before,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-2:checked + label i:before,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-3:checked + label i:before {
-  -webkit-transform: translate(5px, 8px) rotate(45deg);
-  transform: translate(5px, 8px) rotate(45deg);
-}
-
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-1:checked + label i:after,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-2:checked + label i:after,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger #checkbox-3:checked + label i:after {
-  -webkit-transform: translate(-5px, 8px) rotate(-45deg);
-  transform: translate(-5px, 8px) rotate(-45deg);
-}
-
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border: 1px solid #d0d0d0;
   position: relative;
   text-align: center;
@@ -944,23 +921,38 @@ footer {
   width: 100%;
   margin: 0;
   padding: 20px;
-  color: #333333;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 700;
   cursor: pointer;
   background-color: #fff;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox i {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item .accordion__pick {
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item .accordion__pick h6 {
+  color: #333333;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 0 15px;
+}
+
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item i {
   position: absolute;
   display: inline-block;
   width: 20px;
   height: 20px;
-  right: 20px;
+  right: 25px;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox i:before, .whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox i:after {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item i:before, .whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item i:after {
   position: absolute;
   content: "";
   width: 16px;
@@ -972,26 +964,23 @@ footer {
   transition: transform 250ms ease, -webkit-transform 250ms ease;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox i:before {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item i:before {
   -webkit-transform: translate(-5px, 8px) rotate(45deg);
   transform: translate(-5px, 8px) rotate(45deg);
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox i:after {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__item i:after {
   -webkit-transform: translate(5px, 8px) rotate(-45deg);
   transform: translate(5px, 8px) rotate(-45deg);
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .checkbox .whatWeDo__pick {
-  margin-right: 15px;
-}
-
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .content {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__content {
+  display: none;
   border-left: 1px solid #d0d0d0;
   border-right: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
-  position: relative;
   max-height: 1px;
+  max-height: 150px;
   padding: 0;
   overflow-y: scroll;
   font-size: 14px;
@@ -1001,30 +990,26 @@ footer {
   transition: max-height 500ms ease-in-out;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion .trigger .content p {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__content p {
   margin: 25px 20px;
   color: #999999;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion ::-webkit-scrollbar {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion .accordion__items .accordion__content.in {
+  display: block;
+}
+
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion ::-webkit-scrollbar {
   width: 5px;
   height: 8px;
   background: transparent;
 }
 
-.whatWeDo .whatWeDo__content .whatWeDo__slaids .accordion ::-webkit-scrollbar-thumb {
+.whatWeDo .whatWeDo__content .whatWeDo__slaids .whatWeDo__accordion ::-webkit-scrollbar-thumb {
   background: #777777;
   border-radius: 15px;
-}
-
-.whatWeDo .whatWeDo__content .whatWeDo__slaids #checkbox-1:checked ~ .content,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids #checkbox-2:checked ~ .content,
-.whatWeDo .whatWeDo__content .whatWeDo__slaids #checkbox-3:checked ~ .content {
-  max-height: 180px;
-  -webkit-transition: max-height 500ms ease-in-out;
-  transition: max-height 500ms ease-in-out;
 }
 
 .whatWeDo .whatWeDo__slider .whatWeDo__slide {
@@ -1722,7 +1707,7 @@ footer {
 }
 
 .plan {
-  background: url("./img/background-section6.png") no-repeat bottom/cover #f4fbfc;
+  background: url("/img/background-section6.png") no-repeat bottom/cover #f4fbfc;
   padding: 100px 0;
 }
 
@@ -1802,7 +1787,7 @@ footer {
 }
 
 .plan .plan__items .plan__item {
-  background: url(./img/section11-logo1.png) no-repeat top #fff;
+  background: url(/img/section11-logo1.png) no-repeat top #fff;
   background-size: contain;
   max-width: 320px;
   width: 100%;

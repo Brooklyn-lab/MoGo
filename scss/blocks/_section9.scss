@@ -1,7 +1,6 @@
 // Section 9----------------------------------------------------------
 .plan {
-  background: url("./img/background-section6.png") no-repeat bottom/cover
-    #f4fbfc;
+  background: url("/img/background-section6.png") no-repeat bottom/cover #f4fbfc;
   padding: 100px 0;
   .plan__title {
     @include title;
@@ -19,7 +18,7 @@
       justify-content: center;
     }
     .plan__item {
-      background: url(./img/section11-logo1.png) no-repeat top #fff;
+      background: url(/img/section11-logo1.png) no-repeat top #fff;
       background-size: contain;
       max-width: 320px;
       width: 100%;

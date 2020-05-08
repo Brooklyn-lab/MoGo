@@ -48,4 +48,17 @@ jQuery(document).ready(function() {
       $(this).addClass("active");
     });
   });
+
+  // Accodreon
+  $(".accordion__item").click(function() {
+    $(this)
+      .toggleClass("in")
+      .next()
+      .slideToggle();
+    $(".accordion__item")
+      .not(this)
+      .removeClass("in")
+      .next()
+      .slideUp();
+  });
 });

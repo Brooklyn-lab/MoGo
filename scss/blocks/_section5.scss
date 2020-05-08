@@ -31,29 +31,14 @@
       @media screen and (max-width: 1200px) {
         margin-bottom: 0;
       }
-      .accordion {
+      .whatWeDo__accordion {
         position: relative;
         width: 100%;
-        .trigger {
+        .accordion__items {
           margin-bottom: 15px;
-          #checkbox-1,
-          #checkbox-2,
-          #checkbox-3 {
-            display: none;
-            &:checked + label {
-              background-color: #fff;
-              i {
-                &:before {
-                  transform: translate(5px, 8px) rotate(45deg);
-                }
-                &:after {
-                  transform: translate(-5px, 8px) rotate(-45deg);
-                }
-              }
-            }
-          }
-          .checkbox {
+          .accordion__item {
             display: flex;
+            justify-content: space-between;
             border: 1px solid #d0d0d0;
             position: relative;
             text-align: center;
@@ -61,15 +46,24 @@
             width: 100%;
             margin: 0;
             padding: 20px;
-            @include h6;
             cursor: pointer;
             background-color: #fff;
+            .accordion__pick {
+              margin-right: 15px;
+              display: flex;
+              text-align: center;
+              align-items: center;
+              h6 {
+                @include h6;
+                margin: 0 0 0 15px;
+              }
+            }
             i {
               position: absolute;
               display: inline-block;
               width: 20px;
               height: 20px;
-              right: 20px;
+              right: 25px;
               &:before,
               &:after {
                 position: absolute;
@@ -86,16 +80,14 @@
                 transform: translate(5px, 8px) rotate(-45deg);
               }
             }
-            .whatWeDo__pick {
-              margin-right: 15px;
-            }
           }
-          .content {
+          .accordion__content {
+            display: none;
             border-left: 1px solid #d0d0d0;
             border-right: 1px solid #d0d0d0;
             border-bottom: 1px solid #d0d0d0;
-            position: relative;
             max-height: 1px;
+            max-height: 150px;
             padding: 0;
             overflow-y: scroll;
             font-size: 14px;
@@ -105,6 +97,9 @@
             p {
               margin: 25px 20px;
               @include p;
+            }
+            &.in {
+              display: block;
             }
           }
         }
@@ -117,12 +112,6 @@
           background: #777777;
           border-radius: 15px;
         }
-      }
-      #checkbox-1:checked ~ .content,
-      #checkbox-2:checked ~ .content,
-      #checkbox-3:checked ~ .content {
-        max-height: 180px;
-        transition: max-height 500ms ease-in-out;
       }
     }
   }
