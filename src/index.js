@@ -45,8 +45,30 @@ jQuery(document).ready(function() {
       }
     });
     final.each(function() {
-      $(this).addClass("active");
+      if (btnText === "all") {
+        $(this).addClass("active");
+      } else {
+        $(this)
+          .addClass("active")
+          .removeClass("vis");
+        console.log(btnText);
+      }
     });
+
+    // final.each(function() {
+    //   $(this)
+    //     .addClass("active")
+    //     .removeClass("vis");
+    // });
+  });
+
+  let more = $(".filter__more_files");
+  more.on("click", function() {
+    let cards = $(".tabs__card");
+    cards
+      .addClass("active")
+      .removeClass("vis")
+      .toggleClass("vis");
   });
 
   // Accodreon

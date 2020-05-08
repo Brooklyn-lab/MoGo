@@ -131,32 +131,6 @@
     background: #fff;
   }
 }
-
-@mixin btn {
-  max-width: 154px;
-  width: 100%;
-  border-radius: 20px;
-  height: 34px;
-  border: 3px solid #fff;
-  color: #fff;
-  background: transparent;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 12px 30px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.5s;
-  position: relative;
-  user-select: none;
-  transition: 0.5s;
-  &:hover {
-    color: #e88283;
-    background: #fff;
-  }
-}
-
 @mixin btns {
   align-items: center;
   text-align: center;
@@ -202,7 +176,7 @@
   background: linear-gradient(
     180deg,
     rgba(232, 129, 130, 0.9) 0%,
-    rgba(239, 217, 137, 0.9) 56%
+    rgba(239, 217, 137, 0.9) 65%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

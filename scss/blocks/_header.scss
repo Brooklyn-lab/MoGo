@@ -114,6 +114,7 @@
         backface-visibility: hidden;
         position: absolute;
         left: 0;
+        border-radius: 10px;
         border-top: 5px solid white;
         width: 100%;
         transition: 0.55s;
@@ -240,6 +241,9 @@
         }
         h1 {
           font-size: 100px;
+          &::after {
+            right: 45%;
+          }
         }
       }
     }
@@ -263,7 +267,7 @@
         h1 {
           font-size: 70px;
           &::after {
-            right: 46%;
+            right: 44%;
           }
         }
       }
