@@ -116,6 +116,24 @@
     }
   }
   .whatWeDo__slider {
+    .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      height: 0;
+      width: 100%;
+      top: 40%;
+      button {
+        &:focus {
+          outline: none;
+        }
+        span {
+          font-size: 40px;
+          color: #cccccc;
+        }
+      }
+    }
     .whatWeDo__slide {
       display: flex;
       justify-content: center;
@@ -153,22 +171,27 @@
     }
   }
 }
-
-.owl-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  height: 0;
-  width: 100%;
-  top: 40%;
-  button {
-    &:focus {
-      outline: none;
-    }
-    span {
-      font-size: 40px;
-      color: #cccccc;
+@media screen and (max-width: 576px) {
+  .whatWeDo {
+    .container {
+      max-width: 510px;
+      width: 100%;
+      .whatWeDo__slider {
+        .whatWeDo__slide {
+          .whatWeDo__slide_items {
+            p {
+              font-size: 13px;
+            }
+          }
+          .whatWeDo__slide_logo {
+            img {
+              max-width: 100px;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
     }
   }
 }

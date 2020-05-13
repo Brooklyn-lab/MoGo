@@ -36,18 +36,78 @@
     }
   }
 }
-
 @media screen and (max-width: 768px) {
   .design {
+    padding-top: 50px;
     .design__content {
+      max-width: 510px;
+      width: 100%;
+      height: auto;
       .design__tablet {
         img {
+          max-width: 510px;
+          width: 100%;
+          height: auto;
           margin: 0;
         }
       }
       .design__phone {
-        max-width: 240px;
+        max-width: 205px;
         width: 100%;
+        height: auto;
+        img {
+          max-width: 205px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .design {
+    .design__content {
+      .design__phone {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+        img {
+          max-width: 180px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .design {
+    .design__content {
+      .design__phone {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+        img {
+          max-width: 150px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .design {
+    .design__content {
+      .design__phone {
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+        img {
+          max-width: 120px;
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }

@@ -1,5 +1,10 @@
 jQuery(document).ready(function() {
-  // Slaider
+  // Body --- overflow: hidden (active hamburger);
+  $(".menu__btn").click(function() {
+    $("body").toggleClass("lock");
+  });
+
+  // --------- Slaider -----------
   $(".whatWeDo__slider, .work__slider").owlCarousel({
     loop: true,
     nav: true,
@@ -9,12 +14,20 @@ jQuery(document).ready(function() {
     .not(this)
     .prop("checked", this.checked);
 
-  // overflow: hidden;
-  $(".menu__btn").click(function() {
-    $("body").toggleClass("lock");
+  // ---------- Accodreon --------------
+  $(".accordion__item").click(function() {
+    $(this)
+      .toggleClass("in")
+      .next()
+      .slideToggle();
+    $(".accordion__item")
+      .not(this)
+      .removeClass("in")
+      .next()
+      .slideUp();
   });
 
-  // Filter
+  // ----------- Filter ------------------
   let btns = $(".tabs__btn");
   btns.on("click", function() {
     $(this)
@@ -55,18 +68,5 @@ jQuery(document).ready(function() {
   more.on("click", function() {
     let cards = $(".tabs__card");
     cards.addClass("active").removeClass("vis");
-  });
-
-  // Accodreon
-  $(".accordion__item").click(function() {
-    $(this)
-      .toggleClass("in")
-      .next()
-      .slideToggle();
-    $(".accordion__item")
-      .not(this)
-      .removeClass("in")
-      .next()
-      .slideUp();
   });
 });
