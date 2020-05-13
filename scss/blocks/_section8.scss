@@ -9,9 +9,19 @@
   @media screen and (max-width: 992px) {
     padding: 50px 0;
   }
+  @media screen and (max-width: 576px) {
+    padding: 20px;
+  }
   .feedback__title {
     @include title;
     margin-bottom: 50px;
+    @media screen and (max-width: 334px) {
+      h2 {
+        &::after {
+          top: 105px;
+        }
+      }
+    }
   }
   .feedback__content {
     .feedback__items {

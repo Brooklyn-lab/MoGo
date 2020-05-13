@@ -99,6 +99,28 @@
     }
   }
 }
+@media screen and (max-width: 1140px) {
+  .team {
+    .team__logo {
+      max-width: 380px;
+      margin: 0 auto;
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+  .partners {
+    .partners__content {
+      .partners__logotip {
+        max-width: 380px;
+        margin: 0 auto;
+        &:last-child {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 960px) {
   .team {
@@ -135,25 +157,11 @@
     }
   }
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 576px) {
   .team {
-    .team__logo {
-      max-width: 380px;
-      margin: 0 auto;
-      &:last-child {
-        margin-top: 30px;
-      }
-    }
+    padding: 25px 0 0;
   }
   .partners {
-    .partners__content {
-      .partners__logotip {
-        max-width: 380px;
-        margin: 0 auto;
-        &:last-child {
-          margin-top: 30px;
-        }
-      }
-    }
+    padding: 20px 0;
   }
 }

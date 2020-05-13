@@ -117,22 +117,7 @@
   }
   .whatWeDo__slider {
     .owl-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      height: 0;
-      width: 100%;
-      top: 40%;
-      button {
-        &:focus {
-          outline: none;
-        }
-        span {
-          font-size: 40px;
-          color: #cccccc;
-        }
-      }
+      @include owl-nav;
     }
     .whatWeDo__slide {
       display: flex;
@@ -153,8 +138,6 @@
       .whatWeDo__slide_logo {
         max-width: 144px;
         width: 100%;
-        max-height: 144px;
-        height: 100%;
         border: 3px solid #95e1d3;
         padding: 40px;
         margin-right: 60px;
@@ -176,11 +159,34 @@
     .container {
       max-width: 510px;
       width: 100%;
+      .whatWeDo__title {
+        margin: 40px 0;
+      }
+      .whatWeDo__content {
+        margin-bottom: 20px;
+        .whatWeDo__slaids {
+          .accordion__items {
+            .accordion__item {
+              .accordion__pick {
+                h6 {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
       .whatWeDo__slider {
         .whatWeDo__slide {
           .whatWeDo__slide_items {
             p {
               font-size: 13px;
+            }
+            h6 {
+              font-size: 13px;
+              span {
+                margin-right: 10px;
+              }
             }
           }
           .whatWeDo__slide_logo {
@@ -189,6 +195,10 @@
               width: 100%;
               height: auto;
             }
+          }
+          .whatWeDo__slide_logo {
+            max-width: 100px;
+            padding: 25px;
           }
         }
       }

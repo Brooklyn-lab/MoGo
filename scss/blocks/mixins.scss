@@ -164,7 +164,6 @@
     outline: none;
   }
 }
-
 @mixin back {
   background: -webkit-gradient(
     linear,
@@ -180,4 +179,22 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@mixin owl-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  top: 40%;
+  button {
+    &:focus {
+      outline: none;
+    }
+    span {
+      font-size: 40px;
+      color: #cccccc;
+    }
+  }
 }
