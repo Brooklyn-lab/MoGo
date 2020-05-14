@@ -1,97 +1,97 @@
-.footer {
-  padding: 100px 0 30px;
-  @media screen and (max-width: 992px) {
-    padding: 50px 0 30px;
-  }
-  .footer__items {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 125px;
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: -50px;
-      width: 100%;
-      height: 1px;
-      background: #5555552a;
-    }
-    .footer__title {
-      .footer__text {
-        @include footer-subtitle;
-        max-width: 205px;
-        width: 100%;
-        margin: 20px 0;
-      }
-      .footer__icons {
-        display: flex;
-        .footer__icon {
-          transition: all 0.8s;
-          @include icon;
-          &:hover {
-            transform: rotate(360deg);
-          }
-        }
-        .footer__icon_facebook {
-          background: #3b579d;
-        }
-        .footer__icon_google {
-          background: #da4835;
-        }
-        .footer__icon_twitter {
-          background: #55acee;
-        }
-      }
-    }
-    .footer__item {
-      h6 {
-        @include footer-title;
-        margin-bottom: 45px;
-      }
-      a {
-        @include footer-subtitle;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .footer__items {
-      flex-wrap: wrap;
-      margin: 50px auto;
-      .footer__item {
-        margin: 0 auto;
-        margin-bottom: 20px;
-      }
-    }
-  }
-  .footer__copyright {
-    display: flex;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      left: 5px;
-      top: -35px;
-      width: 100%;
-      height: 1px;
-      background: #5555552a;
-    }
-    p {
-      @include footer-subtitle;
-      margin-right: 35px;
-      position: relative;
-      &:not(:first-child)::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: -16px;
-        top: 6px;
-        width: 1px;
-        height: 18px;
-        background: #555555bb;
-      }
-    }
-  }
-}
+// .footer {
+//   padding: 100px 0 30px;
+//   @media screen and (max-width: 992px) {
+//     padding: 50px 0 30px;
+//   }
+//   .footer__items {
+//     display: flex;
+//     justify-content: space-between;
+//     position: relative;
+//     margin-bottom: 125px;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       right: 0;
+//       left: 0;
+//       top: -50px;
+//       width: 100%;
+//       height: 1px;
+//       background: #5555552a;
+//     }
+//     .footer__title {
+//       .footer__text {
+//         @include footer-subtitle;
+//         max-width: 205px;
+//         width: 100%;
+//         margin: 20px 0;
+//       }
+//       .footer__icons {
+//         display: flex;
+//         .footer__icon {
+//           transition: all 0.8s;
+//           @include icon;
+//           &:hover {
+//             transform: rotate(360deg);
+//           }
+//         }
+//         .footer__icon_facebook {
+//           background: #3b579d;
+//         }
+//         .footer__icon_google {
+//           background: #da4835;
+//         }
+//         .footer__icon_twitter {
+//           background: #55acee;
+//         }
+//       }
+//     }
+//     .footer__item {
+//       h6 {
+//         @include footer-title;
+//         margin-bottom: 45px;
+//       }
+//       a {
+//         @include footer-subtitle;
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 768px) {
+//     .footer__items {
+//       flex-wrap: wrap;
+//       margin: 50px auto;
+//       .footer__item {
+//         margin: 0 auto;
+//         margin-bottom: 20px;
+//       }
+//     }
+//   }
+//   .footer__copyright {
+//     display: flex;
+//     position: relative;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       right: 0;
+//       left: 5px;
+//       top: -35px;
+//       width: 100%;
+//       height: 1px;
+//       background: #5555552a;
+//     }
+//     p {
+//       @include footer-subtitle;
+//       margin-right: 35px;
+//       position: relative;
+//       &:not(:first-child)::after {
+//         content: "";
+//         position: absolute;
+//         right: 0;
+//         left: -16px;
+//         top: 6px;
+//         width: 1px;
+//         height: 18px;
+//         background: #555555bb;
+//       }
+//     }
+//   }
+// }
