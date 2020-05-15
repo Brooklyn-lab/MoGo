@@ -1,105 +1,31 @@
-.plan {
-  background: url("/img/background-section6.png") no-repeat bottom/cover #f4fbfc;
-  padding: 100px 0;
-  .plan__title {
-    @include title;
-    margin-bottom: 80px;
-    @media screen and (max-width: 992px) {
-      margin-bottom: 50px;
-    }
-  }
-  .plan__items {
-    display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: 992px) {
-      flex-wrap: wrap;
-      margin: 20px auto;
-      justify-content: center;
-    }
-    .plan__item {
-      background: url(/img/section11-logo1.png) no-repeat top #fff;
-      background-size: contain;
-      max-width: 320px;
-      width: 100%;
-      height: 580px;
-      border: 1px solid #7c7c7c50;
-      border-radius: 30px;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      padding: 45px 0;
-      line-height: 1;
-      transition: 0.5s;
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
-      &:hover {
-        transform: scale(1.2);
-      }
-      @media screen and (max-width: 992px) {
-        &:not(last-child) {
-          margin-bottom: 15px;
-        }
-      }
-      .plan__content {
-        margin-bottom: 60px;
-      }
-      h5 {
-        font-size: 16px;
-        color: #494949;
-        font-size: 700;
-        margin-top: 50px;
-        line-height: 1;
-      }
-      p {
-        font-size: 14px;
-        color: #7c7c7c;
-      }
-      .plan__prices {
-        display: flex;
-        max-height: 72px;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        color: #53daf4;
-        font-size: 20px;
-        margin-bottom: 20px;
-        .plan__znak {
-          p {
-            @include back;
-            font-size: 20px;
-            padding-bottom: 10px;
-            font-weight: 600;
-          }
-        }
-        .plan__price {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .plan__number {
-            font-size: 72px;
-            margin-right: 5px;
-            margin-left: 5px;
-            font-family: "Raleway";
-            font-weight: 800;
-            text-align: center;
-            @include back;
-          }
-          .plan__date {
-            font-size: 20px;
-            @include back;
-            padding-top: 50px;
-          }
-        }
-      }
-      .plan__inseptTxt {
-        color: #c7c7c7;
-      }
-      .plan__btn {
-        @include btns;
-        max-width: 150px;
-        width: 100%;
-        height: 48px;
+.map {
+  background: linear-gradient(
+      180deg,
+      rgba(217, 217, 217, 0.9) 0%,
+      rgba(217, 217, 217, 0.9) 100%
+    ),
+    url(/img/background-section11.png) no-repeat center/cover;
+  padding: 50px 0 80px;
+  cursor: pointer;
+  .map__items {
+    text-align: center;
+    color: #f38181;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    h3 {
+      margin-top: 17px;
+      user-select: none;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background: #f38181;
+        top: 50px;
+        right: 50%;
+        transform: translateX(48%);
       }
     }
   }

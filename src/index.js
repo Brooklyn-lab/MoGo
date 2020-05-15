@@ -27,46 +27,14 @@ jQuery(document).ready(function() {
       .slideUp();
   });
 
-  // ----------- Filter ------------------
-  let btns = $(".tabs__btn");
-  btns.on("click", function() {
-    $(this)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
-    let cards = $(".tabs__card");
-    cards.removeClass("active");
-    let btnText = $(this)
-      .text()
-      .toLowerCase();
-    let final = cards.filter(function() {
-      if (btnText === "all") {
-        return cards;
-      } else {
-        return $(this).data("category") === btnText;
-      }
-    });
-    final.each(function() {
-      if (btnText === "all") {
-        $(this).addClass("active");
-      } else {
-        $(this)
-          .addClass("active")
-          .removeClass("vis");
-        console.log(btnText);
-      }
-    });
-
-    // final.each(function() {
-    //   $(this)
-    //     .addClass("active")
-    //     .removeClass("vis");
-    // });
+  //-------------footer-instagram------------------------
+  let viweMore = $(".footer__viewMore");
+  viweMore.on("click", function() {
+    let instLogo = $(".footer__inst__logo");
+    instLogo.toggleClass("active");
   });
 
-  let more = $(".filter__more_files");
-  more.on("click", function() {
-    let cards = $(".tabs__card");
-    cards.addClass("active").removeClass("vis");
-  });
+  //-------------footer-date------------------------
+  let date = new Date().getFullYear();
+  $("#date").text(new Date().getFullYear());
 });
