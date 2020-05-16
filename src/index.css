@@ -362,7 +362,7 @@ a {
 
 @media screen and (max-width: 575px) {
   .header {
-    padding: 0 15px;
+    padding: 0 15px 130px;
   }
   .header .header__navigation {
     margin-bottom: 100px;
@@ -2654,4 +2654,29 @@ undefined {
   .footer .footer__date {
     padding: 10px 0;
   }
+}
+
+.footer__btn {
+  opacity: 0;
+}
+
+.footer__btn.show {
+  opacity: 1;
+}
+
+.footer__btn .btn__top {
+  position: fixed;
+  color: #fff;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(232, 129, 130, 0.9)), to(rgba(239, 217, 137, 0.9)));
+  background: linear-gradient(180deg, rgba(232, 129, 130, 0.9) 0%, rgba(239, 217, 137, 0.9) 100%);
+  cursor: pointer;
+  border-radius: 2px;
 }

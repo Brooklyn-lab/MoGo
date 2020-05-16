@@ -37,4 +37,18 @@ jQuery(document).ready(function() {
   //-------------footer-date------------------------
   let date = new Date().getFullYear();
   $("#date").text(new Date().getFullYear());
+
+  //----------------btn-up-------------------------
+  let btn = $(".footer__btn");
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 200) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
+  });
+  btn.on("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "1000");
+  });
 });
