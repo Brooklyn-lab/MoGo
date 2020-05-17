@@ -680,7 +680,7 @@ a {
 }
 
 .services {
-  padding: 100px 0;
+  padding: 100px 0 50px;
 }
 
 .services .services__title {
@@ -780,7 +780,7 @@ a {
 
 @media screen and (max-width: 992px) {
   .services {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
   .services .services__conten_line::after {
     display: none;
