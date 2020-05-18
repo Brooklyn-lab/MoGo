@@ -5,9 +5,10 @@
       rgba(217, 217, 217, 0.9) 100%
     ),
     url(/img/background-section11.png) no-repeat center/cover;
-  padding: 50px 0 80px;
-  cursor: pointer;
-  .map__items {
+  position: relative;
+  .map__logo {
+    padding: 50px 0 80px;
+    cursor: pointer;
     text-align: center;
     color: #f38181;
     font-size: 24px;
@@ -27,6 +28,29 @@
         right: 50%;
         transform: translateX(48%);
       }
+    }
+    &.invis {
+      display: none;
+    }
+  }
+  .map__items {
+    display: none;
+    &.vis {
+      display: block;
+    }
+  }
+  #close {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    font-size: 35px;
+    color: #fff;
+    background: #777;
+    line-height: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    &.vis {
+      display: block;
     }
   }
 }

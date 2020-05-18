@@ -27,6 +27,16 @@ jQuery(document).ready(function() {
       .slideUp();
   });
 
+  //-----------------------map------------------------
+  $(".map").click(function() {
+    $(".map__logo").addClass("invis"), $("#close, .map__items").addClass("vis");
+  });
+
+  $("#close").click(function() {
+    $(".map__items, #close").removeClass("vis"),
+      $(".map__logo").removeClass("invis");
+  });
+
   //-------------footer-instagram------------------------
   let viweMore = $(".footer__viewMore");
   viweMore.on("click", function() {

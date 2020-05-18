@@ -95,18 +95,20 @@
         &:last-child {
           margin-bottom: 0;
         }
-        .footer__blogs__title {
-          @include h6;
-          font-size: 12px;
-          margin: 10px 0 10px 20px;
-        }
-        .footer__blogs__subtitle {
-          color: #999999;
-          font-family: "Roboto", sans-serif;
-          font-weight: 300;
-          font-size: 13px;
-          font-style: italic;
-          margin-left: 20px;
+        .footer__blogs__items {
+          .footer__blogs__title {
+            @include h6;
+            font-size: 12px;
+            margin: 10px 0 10px 20px;
+          }
+          .footer__blogs__subtitle {
+            color: #999999;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+            font-style: italic;
+            margin-left: 20px;
+          }
         }
       }
     }
@@ -158,6 +160,31 @@
       }
     }
   }
+  .footer__btn {
+    opacity: 0;
+    &.show {
+      opacity: 1;
+    }
+    .btn__top {
+      position: fixed;
+      color: #fff;
+      bottom: 80px;
+      right: 40px;
+      z-index: 9999;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+      text-align: center;
+      line-height: 30px;
+      background: linear-gradient(
+        180deg,
+        rgba(232, 129, 130, 0.9) 0%,
+        rgba(239, 217, 137, 0.9) 100%
+      );
+      cursor: pointer;
+      border-radius: 2px;
+    }
+  }
 }
 @media screen and (max-width: 1199px) {
   .footer {
@@ -184,22 +211,35 @@
   .footer {
     padding-top: 50px;
     .footer__content {
-      grid-template-rows: 3fr;
-      grid-template-columns: 1fr;
+      grid-template-rows: 2fr;
+      grid-template-columns: 2fr;
       .footer__items {
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row: 3;
-        margin: 30px auto 0;
+        grid-row: 2;
+        margin: 0 auto;
       }
       .footer__blogs {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row: 2;
-        margin: 0 auto 30px;
+        max-width: 100%;
+        width: auto;
+        .footer__blogs__item {
+          display: block;
+          .footer__blogs__items {
+            .footer__blogs__logo {
+              margin: 0 auto;
+            }
+            .footer__blogs__title {
+              margin-left: 0;
+            }
+            .footer__blogs__subtitle {
+              margin-left: 0;
+            }
+          }
+        }
+        margin: 0 15px 30px;
       }
       .footer__instagram {
-        margin: 0 auto 30px;
+        margin: 0 15px 30px;
       }
     }
     .footer__date {
@@ -207,29 +247,37 @@
     }
   }
 }
-
-.footer__btn {
-  opacity: 0;
-  &.show {
-    opacity: 1;
-  }
-  .btn__top {
-    position: fixed;
-    color: #fff;
-    bottom: 80px;
-    right: 40px;
-    z-index: 9999;
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-    text-align: center;
-    line-height: 30px;
-    background: linear-gradient(
-      180deg,
-      rgba(232, 129, 130, 0.9) 0%,
-      rgba(239, 217, 137, 0.9) 100%
-    );
-    cursor: pointer;
-    border-radius: 2px;
+@media screen and (max-width: 474px) {
+  .footer {
+    .footer__content {
+      grid-template-rows: 3fr;
+      grid-template-columns: 1fr;
+      .footer__items {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 3;
+        margin: 30px auto 0;
+        .footer__input {
+          #input {
+            max-width: 100%;
+            margin-bottom: 5px;
+          }
+          .footer__btn {
+            max-width: 100%;
+          }
+        }
+      }
+      .footer__blogs {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        max-width: 268px;
+        width: 100%;
+        margin: 0 auto 30px;
+      }
+      .footer__instagram {
+        margin: 0 auto 30px;
+      }
+    }
   }
 }
