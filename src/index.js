@@ -28,27 +28,15 @@ jQuery(document).ready(function() {
   });
 
   //-----------------------map------------------------
-  $(".map").click(function() {
-    $(".map__logo").addClass("invis");
+  $(".map__logo").click(function() {
+    $(this).addClass("invis");
     $(".map__close, .map__items").addClass("vis");
   });
 
   $(".map__close").click(function() {
-    $(".map__close, .map__items").removeClass("invis");
-    $(".map__logo").removeClass("vis");
-    console.log(1);
+    $(".map__close, .map__items").removeClass("vis");
+    $(".map__logo").removeClass("invis");
   });
-
-  // $(".map").click(function() {
-  //   $(".map__logo").hide();
-  //   $("#close, .map__items").show();
-  // });
-
-  // $("#close").click(function() {
-  //   $("#close, .map__items").hide();
-  //   $(".map__logo").show();
-  //   console.log(1);
-  // });
 
   //-------------footer-instagram------------------------
   let viweMore = $(".footer__viewMore");
