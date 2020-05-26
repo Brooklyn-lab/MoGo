@@ -35,12 +35,14 @@
   }
   .map__items {
     display: none;
+    background: #fff;
     &.vis {
       display: block;
     }
   }
-  #close {
+  .map__close {
     display: none;
+    cursor: pointer;
     position: absolute;
     right: 15px;
     top: 20px;

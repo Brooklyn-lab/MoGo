@@ -29,13 +29,26 @@ jQuery(document).ready(function() {
 
   //-----------------------map------------------------
   $(".map").click(function() {
-    $(".map__logo").addClass("invis"), $("#close, .map__items").addClass("vis");
+    $(".map__logo").addClass("invis");
+    $(".map__close, .map__items").addClass("vis");
   });
 
-  $("#close").click(function() {
-    $(".map__items, #close").removeClass("vis"),
-      $(".map__logo").removeClass("invis");
+  $(".map__close").click(function() {
+    $(".map__close, .map__items").removeClass("invis");
+    $(".map__logo").removeClass("vis");
+    console.log(1);
   });
+
+  // $(".map").click(function() {
+  //   $(".map__logo").hide();
+  //   $("#close, .map__items").show();
+  // });
+
+  // $("#close").click(function() {
+  //   $("#close, .map__items").hide();
+  //   $(".map__logo").show();
+  //   console.log(1);
+  // });
 
   //-------------footer-instagram------------------------
   let viweMore = $(".footer__viewMore");

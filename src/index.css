@@ -2216,14 +2216,16 @@ a {
 
 .map .map__items {
   display: none;
+  background: #fff;
 }
 
 .map .map__items.vis {
   display: block;
 }
 
-.map #close {
+.map .map__close {
   display: none;
+  cursor: pointer;
   position: absolute;
   right: 15px;
   top: 20px;
@@ -2235,7 +2237,7 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.map #close.vis {
+.map .map__close.vis {
   display: block;
 }
 
