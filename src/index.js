@@ -1,7 +1,16 @@
-jQuery(document).ready(function() {
-  // Body --- overflow: hidden (active hamburger);
-  $(".menu__btn").click(function() {
+jQuery(document).ready(function () {
+  //-----------------Burger------------------------
+  $(".header__button, .header__owerlay").click(function () {
     $("body").toggleClass("lock");
+    $(".header__menu, .header__button, .header__owerlay").toggleClass("active");
+  });
+
+  //----------menu Scroll------------------------
+  $('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
+    $("html,body")
+      .stop()
+      .animate({ scrollTop: $($(this).attr("href")).offset().top }, 600);
   });
 
   // --------- Slaider -----------
@@ -15,7 +24,7 @@ jQuery(document).ready(function() {
     .prop("checked", this.checked);
 
   // ---------- Accodreon --------------
-  $(".accordion__item").click(function() {
+  $(".accordion__item").click(function () {
     $(this)
       .toggleClass("in")
       .next()
@@ -28,19 +37,19 @@ jQuery(document).ready(function() {
   });
 
   //-----------------------map------------------------
-  $(".map__logo").click(function() {
+  $(".map__logo").click(function () {
     $(this).addClass("invis");
     $(".map__close, .map__items").addClass("vis");
   });
 
-  $(".map__close").click(function() {
+  $(".map__close").click(function () {
     $(".map__close, .map__items").removeClass("vis");
     $(".map__logo").removeClass("invis");
   });
 
   //-------------footer-instagram------------------------
   let viweMore = $(".footer__viewMore");
-  viweMore.on("click", function() {
+  viweMore.on("click", function () {
     let instLogo = $(".footer__inst__logo");
     instLogo.toggleClass("active");
   });
@@ -51,14 +60,14 @@ jQuery(document).ready(function() {
 
   //----------------btn-up-------------------------
   let btn = $(".footer__btn");
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 200) {
       btn.addClass("show");
     } else {
       btn.removeClass("show");
     }
   });
-  btn.on("click", function(e) {
+  btn.on("click", function (e) {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "1000");
   });
